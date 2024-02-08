@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+<table>
+    <thead>
+        <tr>
+            <th>SR. no.</th>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Phone Number</th>
+            <th>Password</th>
+           
+        </tr>
+    </thead>
+    <tbody>
+        <% for (var i=0; i < users.length; i++){ %>
+            <tr>
+                <td><%= i + 1 %></td>
+                <td><%= users[i].name %></td>
+                <td><%= users[i].email %></td>
+                <td><%= users[i].phonenum %></td>
+                <td><%= users[i].password %></td>
+                <td>
+                    <!-- getuser.ejs -->
+
+
+                </td>
+                <!-- <td>
+                    <% if (users[i].books && users[i].books.length > 0) { %>
+                        <ul>
+                            <% users[i].books.forEach(book => { %>
+                                <li><%= book.book %></li>
+                            <% }); %>
+                        </ul>
+                    <% } else { %>
+                        No books found for this user.
+                    <% } %>
+                </td> -->
+            </tr>
+        <% } %>
+    </tbody>
+</table>
+
+</body>
+</html>
